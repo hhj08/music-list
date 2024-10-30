@@ -1,0 +1,25 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개씩 */
+    gap: 20px; /* 앨범 간격 */
+    width: 100%;
+    max-width: 1200px; /* 그리드의 최대 너비 설정 */
+    margin-top: 20px;
+}
+
+.search-header {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* 세련된 글꼴 사용 */
+    font-size: 1.8rem; /* 글꼴 크기 */
+    font-weight: 600; /* 글꼴 두께 */
+    color: #ffffff; /* 글자 색상 */
+    text-align: center; /* 중앙 정렬 */
+    margin: 20px 0; /* 위아래 여백 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* 약간의 그림자 효과 */
+}
