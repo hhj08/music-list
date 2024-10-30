@@ -7,9 +7,10 @@ export async function getAccessToken() {
     const headers = { "Content-Type": "application/x-www-form-urlencoded" };
     const data = {
         grant_type: 'client_credentials',
-        client_id: process.env.CLIENT_ID,
-        client_secret: process.env.CLIENT_SECRET
+        client_id: process.env.REACT_APP_CLIENT_ID,
+        client_secret: process.env.REACT_APP_CLIENT_SECRET
     };
+
     const res = await axios.post(`https://accounts.spotify.com/api/token`, data, { headers });
     return res.data;
 }

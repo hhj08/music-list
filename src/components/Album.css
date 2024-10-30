@@ -1,0 +1,40 @@
+/* album.css */
+.album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px;
+    width: 180px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    margin: 10px;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+}
+
+.album-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.album-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    white-space: nowrap; /* 한 줄로 표시 */
+    overflow: hidden; /* 넘치는 텍스트 숨기기 */
+    text-overflow: ellipsis; /* ... 표시 */
+    width: 100%;
+    text-align: center;
+}
+
+.album-card .album-info {
+    font-size: 0.8rem; /* 앨범 발표 연도의 폰트 크기 (앨범 이름보다 작게) */
+}

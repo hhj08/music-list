@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from 'react';
 import Search from './Search';
 import { AuthContext } from './AuthContext';
 import Album from './Album';
+import './Main.css';
 
 export default function Main() {
     const { accessToken } = useContext(AuthContext);
@@ -42,16 +43,19 @@ export default function Main() {
     }, [searchText]);
 
     return (
-        <div>
+        <div className="main-container">
+            {albums.length === 0 && (
+                <h1 className="search-header">원하는 음악을 검색해보세요 </h1>
+            )}
             <Search getSearchText={getSearchText}/>
-            <div>{accessToken}</div>
-            <div>{searchText}</div>
             {albums.length !== 0 && (
-                albums.map((album) => {
-                    return <div key={album.id}>
-                        <Album album={album}/>
-                    </div>
-                })
+                <div className="albums-grid">
+                    {albums.map((album) => (
+                        <div key={album.id}>
+                            <Album album={album}/>
+                        </div>
+                    ))}
+                </div>
             )}
         </div>
     );

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useLoaderData } from 'react-router-dom';
 
-
 export default function AlbumDetail() {
     const tracks = useLoaderData();
 
